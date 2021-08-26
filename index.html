@@ -26,32 +26,25 @@ body{
     <div id="lbl"></div>
 </body>
 
-<script>
-    var weekday = new Array(7);
-    weekday[0] = "Sunday";
-    weekday[1] = "Monday";
-    weekday[2] = "Tuesday";
-    weekday[3] = "Wednesday";
-    weekday[4] = "Thursday";
-    weekday[5] = "Friday";
-    weekday[6] = "Saturday";
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+                  <link rel="stylesheet"
+                     href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+                  <div class="calendar"></div>
+                  <script>
+                     GitHubCalendar(".calendar", "arjunskumar", { responsive: true });
+                  </script>
 
-    
-    var today = new Date();
-    var hrs = today.getHours();
-    var dayOfWeek = weekday[today.getDay()];
-    var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
+                  <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-3">
+                     <div id="divMain">
+                        <div id='left-div' class="resume-content">
+                           <img style='float:left; margin:0 1px;' width='340px;' class='img-fluid'
+                              src='https://github-readme-stats.vercel.app/api?username=arjunskumar&show_icons=true&hide_border=true&count_private=true&include_all_commits=true'>
+                        </div>
+                        <div id='right-div' class="resume-content">
+                           <img style='float: right; margin:0 1px;' width='340px;' class='img-fluid'
+                              src='https://github-readme-stats.vercel.app/api/top-langs/?username=arjunskumar&layout=compact&hide_border=true&count_private=true&include_all_commits=true'>
+                        </div>
 
-    var greet;
-
-    if (hrs < 12)
-        greet = 'Good Morning  ';
-    else if (hrs >= 12 && hrs <= 17)
-        greet = 'Good Afternoon ';
-    else if (hrs >= 17 && hrs <= 24)
-        greet = 'Good Evening  ';
-
-    document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${date}</div>`;
-</script> 
+                     </div>
+                      
 </html>
