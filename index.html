@@ -2,23 +2,13 @@
 <head>
     <title>Github Calendar</title> 
     <style>
-#lbl {
-    font-family: monospace;
-    font-size: xx-large;
-    color: #626262;
-    padding: 5px;
-    border: 1px solid #ececec;
-    text-align: center;
-    line-height: 1.5;
-    height:85%
 
-
-}
 #date{
-    font-size:large;
+    font-size:small;
 }
 body{
     background-color: aliceblue;
+
 }
     </style>
 </head>
@@ -38,7 +28,7 @@ body{
       
             <div>
               <!-- Prepare a container for your calendar. -->
-              <div class="calendar" style="width: 650px">
+              <div class="calendar" style="width: 400px">
                 <!-- Loading stuff -->
                 Loading data ...
               </div>
@@ -47,13 +37,13 @@ body{
             <script>
               GitHubCalendar(".calendar", "arjunskumar", {
                 responsive: true,
-                tooltips: false,
-                global_stats: false,
+                tooltips: true,
+                global_stats: true,
               }).then(function () {
                 // delete the space underneath the module bar which is caused by minheight
-                document.getElementsByClassName("calendar")[0].style.minHeight = "120px";
+                document.getElementsByClassName("calendar")[0].style.minHeight = "50px";
                 // hide more and less legen below the contribution graph
-                // document.getElementsByClassName("contrib-legend")[0].style.display = "none";
+                //document.getElementsByClassName("contrib-legend")[0].style.display = "none";
               });
             </script>
           </div>
